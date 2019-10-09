@@ -18,6 +18,7 @@ RUN apt-get update && \
     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" && \
     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" && \
     apt-get update && \
+    apt-get install nfs-common -y && \
     apt-get install -qq -y --no-install-recommends docker-ce=${DOCKER_VERSION} && \
     curl -L https://github.com/docker/compose/releases/download/${DC_VERSION}/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose && \
     chmod +x /usr/local/bin/docker-compose && \
