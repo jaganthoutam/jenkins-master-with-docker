@@ -22,6 +22,12 @@ RUN /usr/local/bin/install-plugins.sh simple-theme-plugin
 RUN /usr/local/bin/install-plugins.sh kubernetes
 # git
 RUN /usr/local/bin/install-plugins.sh git
+#
+RUN /usr/local/bin/install-plugins.sh workflow-job
+RUN /usr/local/bin/install-plugins.sh workflow-aggregator
+RUN /usr/local/bin/install-plugins.sh credentials-binding
+
+
 
 RUN apt-get update && \
     apt-get install -qq -y --no-install-recommends \
