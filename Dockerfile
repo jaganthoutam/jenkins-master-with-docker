@@ -1,4 +1,4 @@
-FROM jenkinsci/jenkins:lts
+FROM jenkins/jenkins:lts
 
 # Running as root to have an easy support for Docker
 USER root
