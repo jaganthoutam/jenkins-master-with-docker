@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "docker build --no-cache -f docker/Dockerfile -t jaganthoutam/jenkins-master-docker ."
+                sh "docker build --no-cache -f Dockerfile -t jaganthoutam/jenkins-master-docker ."
                 sh "docker tag jaganthoutam/velocityship jaganthoutam/jenkins-master-docker:latest"
                 sh "docker tag jaganthoutam/velocityship jaganthoutam/jenkins-master-docker:${env.GIT_COMMIT}"      
             }
