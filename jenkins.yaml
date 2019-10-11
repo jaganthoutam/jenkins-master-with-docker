@@ -61,7 +61,12 @@ spec:
         hostPath:
           path: /var/run/docker.sock
           type: File
+#For AWS EFS Mount
+#       - name: jenkins-storage
+#         nfs:
+#           server: 'EFSID.amazonaws.com'
+#           path: '/'
+# For hostpath WARNING Not for Production
       - name: jenkins-storage
-        nfs:
-          server: 'EFSID.amazonaws.com'
-          path: '/'
+        hostPath:
+          path: '/tmp/jenkins'
