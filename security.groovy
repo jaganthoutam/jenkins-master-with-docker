@@ -22,11 +22,12 @@ else {
     hudsonRealm.createAccount(user, pass)
     instance.setSecurityRealm(hudsonRealm)
 
-    def strategy = new FullControlOnceLoggedInAuthorizationStrategy()
+    def strategy = new hudson.security.FullControlOnceLoggedInAuthorizationStrategy()
     strategy.setAllowAnonymousRead(false)
     instance.setAuthorizationStrategy(strategy)
-    instance.save()
 
+    instance.save()
+    
     Jenkins.instance.getInjector().getInstance(AdminWhitelistRule.class).setMasterKillSwitch(false)
 
     println "User " + user + " was created"
