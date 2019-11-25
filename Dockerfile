@@ -3,7 +3,7 @@ FROM jenkins/jenkins:lts
 # Running as root to have an easy support for Docker
 USER root
 
-# A default admin user
+# A default ADMIN user NOT SAFE............
 ENV ADMIN_USER=admin \
     ADMIN_PASSWORD=password
 
