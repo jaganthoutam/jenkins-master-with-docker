@@ -44,7 +44,6 @@ command-launcher
 conditional-buildstep
 config-file-provider
 configuration-as-code
-copy-to-slave
 copyartifact
 credentials
 credentials-binding
