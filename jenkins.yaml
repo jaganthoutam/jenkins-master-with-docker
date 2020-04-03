@@ -13,7 +13,7 @@ spec:
     nodePort: 30429
     name: jenkins
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jenkins
@@ -69,4 +69,4 @@ spec:
 # For hostpath WARNING Not for Production
       - name: jenkins-storage
         hostPath:
-          path: '/tmp/jenkins'
+          path: '/vagrant/jenkins_home'
