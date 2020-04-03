@@ -23,7 +23,7 @@ RUN apt-get -qq update && \
     curl -sSL https://get.docker.com/ | sh
 
 # Install Maven
-RUN curl -LO https://www-eu.apache.org/dist/maven/maven-3/3.6.2/source/apache-maven-3.6.2-src.tar.gz && \
+RUN curl -LO https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.6.2/apache-maven-3.6.2-src.tar.gz && \
     tar xzf apache-maven-3.6.2-src.tar.gz && \
     mv ./apache-maven-3.6.2 /opt/apache-maven | sh
 ENV PATH=/opt/apache-maven/bin:$PATH
