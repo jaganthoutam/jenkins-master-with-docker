@@ -23,14 +23,14 @@ RUN apt-get -qq update && \
     curl -sSL https://get.docker.com/ | sh
 
 # Install Maven
-RUN curl -LO https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.6.2/apache-maven-3.6.2-src.tar.gz && \
-    tar xzf apache-maven-3.6.2-src.tar.gz && \
-    mv ./apache-maven-3.6.2 /opt/apache-maven | sh
-ENV PATH=/opt/apache-maven/bin:$PATH
+RUN apt-get install -y maven
+
 #**********script-security plugin not safe use at won risk****************
 ENV _JAVA_OPTIONS="-Djdk.net.URLClassPath.disableClassPathURLCheck=true -Dpermissive-script-security.enabled=true"
 
 # ENV M2_HOME="/opt/apache-maven"
+
+
 
 # Install kubectl and helm
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && \
