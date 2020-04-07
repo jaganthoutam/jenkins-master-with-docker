@@ -39,6 +39,9 @@ spec:
         version: "1.0"
         git_version: "1.0"
     spec:
+      securityContext:
+        fsGroup: 1000 
+        runAsUser: 0
       containers:
       - name: jenkins
         image: jaganthoutam/jenkins-master-docker:latest
