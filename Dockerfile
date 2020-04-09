@@ -25,6 +25,9 @@ RUN apt-get -qq update && \
 # Install Maven
 RUN apt-get install -y maven
 
+#Install Ansible
+RUN apt-get install -y ansible
+
 #**********script-security plugin not safe use at won risk****************
 ENV _JAVA_OPTIONS="-Djdk.net.URLClassPath.disableClassPathURLCheck=true -Dpermissive-script-security.enabled=true"
 
