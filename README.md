@@ -2,7 +2,7 @@
 
 To run the Jenkins with Docker installed.
 
-	mkdir -p /vagrant/jenkins_home
+	mkdir -p /data/jenkins_home
 
 Jenkins ver. latest
 
