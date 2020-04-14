@@ -72,4 +72,4 @@ spec:
 # For hostpath WARNING Not for Production
       - name: jenkins-storage
         hostPath:
-          path: '/vagrant/jenkins_home'
+          path: '/data/jenkins_home'
