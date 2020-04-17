@@ -18,6 +18,6 @@ To run the K8s Deployment.
 To DO:
 
 
-Default User/Pass : admin/password (https://github.com/jaganthoutam/jenkins-master-with-docker/blob/master/Dockerfile "here")
+Default User/Pass : [admin/password] (https://github.com/jaganthoutam/jenkins-master-with-docker/blob/master/Dockerfile "here")
 
 	Create k8s Secrets to use Password.
