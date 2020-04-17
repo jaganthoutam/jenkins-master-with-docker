@@ -13,3 +13,8 @@ Jenkins ver. latest
 To run the K8s Deployment.
 
        kubectl apply -f https://raw.githubusercontent.com/jaganthoutam/jenkins-master-with-docker/master/jenkins.yaml
+
+
+To DO:
+Default User/Pass : admin/password
+	Create k8s Secrets to use Password.
