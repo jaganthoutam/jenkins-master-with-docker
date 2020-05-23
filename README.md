@@ -14,11 +14,13 @@ To run the K8s Deployment.
 
 Add   node that you want to deply the Jenkins: `kubectl label nodes node2 jenkins=ture` 
 	
-	```
+```
         nodeSelector:
           jenkins: "true"                          
-        ```
-	
+ ```
+
+Apply theDeployment file:
+
        	kubectl apply -f https://raw.githubusercontent.com/jaganthoutam/jenkins-master-with-docker/master/jenkins.yaml
 
 
