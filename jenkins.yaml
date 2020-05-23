@@ -39,6 +39,8 @@ spec:
         version: "1.0"
         git_version: "1.0"
     spec:
+      nodeSelector:
+        jenkins: "true"
       securityContext:
         fsGroup: 1000 
         runAsUser: 0
