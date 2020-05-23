@@ -12,11 +12,12 @@ Jenkins ver. latest
 
 To run the K8s Deployment.
 
-	Add   node that you want to deply the Jenkins: `kubectl label nodes node2 jenkins=ture` 
-	
+Add   node that you want to deply the Jenkins: `kubectl label nodes node2 jenkins=ture` 
+	```
         nodeSelector:
           jenkins: "true"                          
-
+        ```
+	
        	kubectl apply -f https://raw.githubusercontent.com/jaganthoutam/jenkins-master-with-docker/master/jenkins.yaml
 
 
