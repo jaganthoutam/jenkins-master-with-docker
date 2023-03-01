@@ -1,0 +1,23 @@
+name: Build ADOP-Jenkins Docker Image CI
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+    
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: jaganthoutam/jenkins-master-with-docker
+    steps:          
+      - name: Set up QEMU
+        uses: actions/checkout@v2
+
+      - name: Build the Docker image
+        run: docker build -t $IMAGE_NAME:latest .
+        
+      - name: Push Docker Image to DockerHub
+        run: |-
+           docker login -u="${{ secrets.DOCKERHUB_USERNAME }}" -p="${{ secrets.DOCKERHUB_TOKEN }}"
+           docker push $IMAGE_NAME:latest
